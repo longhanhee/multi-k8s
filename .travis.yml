@@ -15,7 +15,7 @@ before_install:
   # Add gcloud to $PATH
   - source /home/travis/google-cloud-sdk/path.bash.inc
   - gcloud version
-  - gcloud components update -y kubectl
+  - gcloud components update kubectl --quiet
   - gcloud auth activate-service-account --key-file service-account.json  
   - gcloud config set project operating-surge-261607
   - gcloud config set compute/zone asia-southeast1-a	
